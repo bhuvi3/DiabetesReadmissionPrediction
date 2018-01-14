@@ -1,0 +1,204 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.misc.InputMappedClassifier -I -trim -W weka.classifiers.functions.MLPClassifier -- -N 2 -R 0.01 -O 1.0E-6 -P 1 -E 1 -S 1
+Relation:     complete_cleared_all_diag_compress_train_select_rand_4_times_-weka.filters.unsupervised.attribute.NumericToNominal-R4,5,6-weka.filters.unsupervised.attribute.Remove-R1-3,7-8,10,14-16,18-22
+Instances:    108692
+Attributes:   9
+              admission_type_id
+              discharge_disposition_id
+              admission_source_id
+              num_procedures
+              number_outpatient
+              number_emergency
+              number_inpatient
+              number_diagnoses
+              readmitted
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+InputMappedClassifier:
+
+MLPClassifier with ridge value 0.01 and 2 hidden units (useCGD=false)
+
+Output unit 0 weight for hidden unit 0: -2.340381052459229
+Output unit 1 weight for hidden unit 0: 0.3432083440711156
+Output unit 2 weight for hidden unit 0: 1.2461113468466334
+
+Hidden unit 0 weights:
+
+0.07196714691166754 admission_type_id=1
+-0.013595026858777092 admission_type_id=2
+0.002498262020312816 admission_type_id=3
+0.018849867643761682 admission_type_id=4
+-0.05516321910903241 admission_type_id=5
+-0.036365806547400736 admission_type_id=6
+-0.14863236582861777 admission_type_id=7
+0.02898806921254247 admission_type_id=8
+-0.17017543010052738 discharge_disposition_id=1
+0.12038833689193966 discharge_disposition_id=2
+0.23919133727219227 discharge_disposition_id=3
+0.007627692596898802 discharge_disposition_id=4
+0.20742101559105658 discharge_disposition_id=5
+-0.02560154953427662 discharge_disposition_id=6
+0.018751778131071564 discharge_disposition_id=7
+0.014189120385158188 discharge_disposition_id=8
+0.1928506111473686 discharge_disposition_id=9
+-0.1804238275497104 discharge_disposition_id=10
+-0.7985163540770045 discharge_disposition_id=11
+0.20482592370263883 discharge_disposition_id=12
+0.4679523025466099 discharge_disposition_id=13
+0.1010069172623437 discharge_disposition_id=14
+0.3115093653525349 discharge_disposition_id=15
+-0.07241719021313588 discharge_disposition_id=16
+-0.08167062990874462 discharge_disposition_id=17
+0.10636450840169384 discharge_disposition_id=18
+0.14189878040649076 discharge_disposition_id=19
+-0.08653466050965006 discharge_disposition_id=20
+0.5257688357464905 discharge_disposition_id=22
+-0.027463347555791103 discharge_disposition_id=23
+0.022411170942204538 discharge_disposition_id=24
+-0.016145863969519374 discharge_disposition_id=25
+-0.05975971883814255 discharge_disposition_id=27
+0.43820366043938014 discharge_disposition_id=28
+0.01785631621808016 admission_source_id=1
+0.012866133683308413 admission_source_id=2
+0.021508478248984497 admission_source_id=3
+0.05965917868700333 admission_source_id=4
+-0.023201363326985552 admission_source_id=5
+0.06058257742094896 admission_source_id=6
+-0.08282621792636184 admission_source_id=7
+-0.3694053653778013 admission_source_id=8
+0.24978522321759622 admission_source_id=9
+-0.1655101736917237 admission_source_id=10
+-0.1576161211331757 admission_source_id=11
+0.1036961647967203 admission_source_id=14
+-0.007144326930533421 admission_source_id=17
+-0.0016394584717773222 admission_source_id=20
+0.11260166980766655 admission_source_id=22
+-0.07932149724328338 admission_source_id=25
+0.07361268419361093 num_procedures
+-0.1082604165645478 number_outpatient
+0.1050046167574179 number_emergency
+0.5499046130909494 number_inpatient
+0.012206996183041023 number_diagnoses
+
+Hidden unit 0 bias: -0.3673441977179077
+
+Output unit 0 weight for hidden unit 1: -3.789253679249582
+Output unit 1 weight for hidden unit 1: 7.015360946251819
+Output unit 2 weight for hidden unit 1: -3.6526499429588224
+
+Hidden unit 1 weights:
+
+0.05662474229361239 admission_type_id=1
+0.023125040019874216 admission_type_id=2
+0.07175633373172671 admission_type_id=3
+-0.004133787617844707 admission_type_id=4
+0.008016551268894593 admission_type_id=5
+-0.06690736030012084 admission_type_id=6
+0.11262569832776588 admission_type_id=7
+0.01257069651021242 admission_type_id=8
+-0.03247425355052974 discharge_disposition_id=1
+-0.05775174739139595 discharge_disposition_id=2
+-0.14707307066330788 discharge_disposition_id=3
+-0.01839217963289406 discharge_disposition_id=4
+-0.10172182090433964 discharge_disposition_id=5
+-0.09680781802457605 discharge_disposition_id=6
+-0.008904335206595742 discharge_disposition_id=7
+-0.014914556001373855 discharge_disposition_id=8
+-0.019537255388910775 discharge_disposition_id=9
+-0.09446348298371002 discharge_disposition_id=10
+1.6514524230837497 discharge_disposition_id=11
+-0.08872772973080538 discharge_disposition_id=12
+0.08408397013410387 discharge_disposition_id=13
+0.08241210138568009 discharge_disposition_id=14
+-0.26108915538339234 discharge_disposition_id=15
+0.004272628734728454 discharge_disposition_id=16
+0.004932740171347125 discharge_disposition_id=17
+-0.050669512788133184 discharge_disposition_id=18
+0.11171194586863953 discharge_disposition_id=19
+0.06534304303238636 discharge_disposition_id=20
+-0.21235819858472005 discharge_disposition_id=22
+0.01018004790234049 discharge_disposition_id=23
+5.9180458463753385E-6 discharge_disposition_id=24
+0.01582023746294453 discharge_disposition_id=25
+0.006146750772188588 discharge_disposition_id=27
+-0.162229814513118 discharge_disposition_id=28
+-2.673588595247799E-4 admission_source_id=1
+0.017739554624933356 admission_source_id=2
+-0.00928140955976381 admission_source_id=3
+0.04874546817826152 admission_source_id=4
+0.027751412081928065 admission_source_id=5
+0.029595415934586818 admission_source_id=6
+-0.02546507363582775 admission_source_id=7
+0.005895448072604223 admission_source_id=8
+-0.016906652952373268 admission_source_id=9
+0.08027211162259718 admission_source_id=10
+-0.04599295759953319 admission_source_id=11
+-0.04300213170993252 admission_source_id=14
+0.06371658454002795 admission_source_id=17
+-0.02554072264086873 admission_source_id=20
+-0.2637001030409518 admission_source_id=22
+0.049610586655357496 admission_source_id=25
+0.006678886572035934 num_procedures
+-0.08167399753005179 number_outpatient
+-0.2982195707033434 number_emergency
+-0.835726123910277 number_inpatient
+-0.12461682195617962 number_diagnoses
+
+Hidden unit 1 bias: -1.3166168866029462
+
+Output unit 0 bias: 0.6941254557917486
+Output unit 1 bias: -2.3083568942154273
+Output unit 2 bias: -0.16459426553149564
+
+Attribute mappings:
+
+Model attributes                    	    Incoming attributes
+------------------------------------	    ----------------
+(nominal) admission_type_id         	--> 4 (nominal) admission_type_id
+(nominal) discharge_disposition_id  	--> 5 (nominal) discharge_disposition_id
+(nominal) admission_source_id       	--> 6 (nominal) admission_source_id
+(numeric) num_procedures            	--> 9 (numeric) num_procedures
+(numeric) number_outpatient         	--> 11 (numeric) number_outpatient
+(numeric) number_emergency          	--> 12 (numeric) number_emergency
+(numeric) number_inpatient          	--> 13 (numeric) number_inpatient
+(numeric) number_diagnoses          	--> 17 (numeric) number_diagnoses
+(nominal) readmitted                	--> 23 (nominal) readmitted
+
+
+Time taken to build model: 85.57 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.2 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       10210               44.2892 %
+Incorrectly Classified Instances     12843               55.7108 %
+Kappa statistic                          0.129 
+Mean absolute error                      0.4164
+Root mean squared error                  0.4613
+Relative absolute error                 92.8377 %
+Root relative squared error             96.1104 %
+Coverage of cases (0.95 level)          99.974  %
+Mean rel. region size (0.95 level)      99.2293 %
+Total Number of Instances            23053     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.009    0.006    0.445      0.009    0.017      0.017    0.620     0.447     >30
+                 0.686    0.453    0.637      0.686    0.661      0.236    0.675     0.703     NO
+                 0.622    0.388    0.172      0.622    0.269      0.151    0.667     0.217     <30
+Weighted Avg.    0.443    0.290    0.517      0.443    0.392      0.150    0.655     0.558     
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+   69 3856 4107 |    a = >30
+   63 8497 3818 |    b = NO
+   23  976 1644 |    c = <30
+

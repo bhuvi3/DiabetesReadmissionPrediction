@@ -1,0 +1,30 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 10 -T 0 -C 0.8 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -c -1
+Relation:     diabetic_data_normalized-weka.filters.unsupervised.attribute.NumericToNominal-R1,2,7,8,9-weka.filters.unsupervised.attribute.StringToNominal-R19,20,21-weka.filters.unsupervised.attribute.Remove-R1-2,5-49
+Instances:    30000
+Attributes:   3
+              race
+              gender
+              readmitted
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.1 (3000 instances)
+Minimum metric <confidence>: 0.8
+Number of cycles performed: 18
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 7
+
+Size of set of large itemsets L(2): 12
+
+Size of set of large itemsets L(3): 6
+
+Best rules found:
+
+

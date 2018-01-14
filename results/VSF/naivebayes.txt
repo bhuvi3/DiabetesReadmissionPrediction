@@ -1,0 +1,166 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.misc.InputMappedClassifier -I -trim -W weka.classifiers.bayes.NaiveBayes
+Relation:     complete_cleared_all_diag_compress_train_select_rand_4_times_-weka.filters.unsupervised.attribute.NumericToNominal-R4,5,6-weka.filters.unsupervised.attribute.Remove-R1-3,7-8,10,14-16,18-22
+Instances:    108692
+Attributes:   9
+              admission_type_id
+              discharge_disposition_id
+              admission_source_id
+              num_procedures
+              number_outpatient
+              number_emergency
+              number_inpatient
+              number_diagnoses
+              readmitted
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+InputMappedClassifier:
+
+Naive Bayes Classifier
+
+                             Class
+Attribute                      >30      NO     <30
+                            (0.24)  (0.37)  (0.39)
+===================================================
+admission_type_id
+  1                         14436.0 20876.0 23196.0
+  2                          4825.0  7015.0  7506.0
+  3                          4323.0  8168.0  7256.0
+  4                             2.0     6.0     6.0
+  5                          1304.0  1900.0  1856.0
+  6                          1678.0  1823.0  2191.0
+  7                             1.0    14.0     1.0
+  8                            56.0   166.0   111.0
+  [total]                   26625.0 39968.0 42123.0
+
+discharge_disposition_id
+  1                         16066.0 23749.0 20661.0
+  2                           506.0   822.0  1211.0
+  3                          3655.0  5211.0  7741.0
+  4                           216.0   314.0   356.0
+  5                           263.0   418.0   896.0
+  6                          4054.0  4411.0  6036.0
+  7                           160.0   225.0   301.0
+  8                            33.0    38.0    61.0
+  9                             3.0    10.0    46.0
+  10                            5.0     2.0     1.0
+  11                            1.0  1225.0     1.0
+  12                            1.0     1.0    11.0
+  13                           30.0   273.0    81.0
+  14                            7.0   255.0    86.0
+  15                           17.0    12.0   111.0
+  16                            5.0     6.0     1.0
+  17                            6.0     9.0     1.0
+  18                          786.0  1649.0  1756.0
+  19                            1.0     9.0     1.0
+  20                            1.0     2.0     1.0
+  22                          398.0   729.0  2096.0
+  23                          104.0   167.0   121.0
+  24                           14.0    23.0    36.0
+  25                          281.0   384.0   316.0
+  27                            2.0     4.0     1.0
+  28                           28.0    38.0   211.0
+  [total]                   26643.0 39986.0 42141.0
+
+admission_source_id
+  1                          7240.0 12154.0 11511.0
+  2                           216.0   481.0   386.0
+  3                            47.0    72.0   101.0
+  4                           484.0  1494.0  1096.0
+  5                           186.0   409.0   391.0
+  6                           272.0  1039.0   636.0
+  7                         16256.0 21529.0 25261.0
+  8                             5.0     8.0     6.0
+  9                             3.0    26.0    46.0
+  10                            2.0     5.0     1.0
+  11                            1.0     2.0     1.0
+  14                            1.0     3.0     1.0
+  17                         1852.0  2699.0  2596.0
+  20                           64.0    46.0    86.0
+  22                            3.0     6.0    11.0
+  25                            1.0     3.0     1.0
+  [total]                   26633.0 39976.0 42131.0
+
+num_procedures
+  mean                        1.258  1.4184  1.2903
+  std. dev.                  1.6678  1.7398  1.6454
+  weight sum                  26617   39960   42115
+  precision                       1       1       1
+
+number_outpatient
+  mean                       0.5346  0.3056  0.4728
+  std. dev.                  1.5404  1.0887  1.3472
+  weight sum                  26617   39960   42115
+  precision                  1.1765  1.1765  1.1765
+
+number_emergency
+  mean                       0.2106  0.0618  0.2825
+  std. dev.                  1.2723  0.4975  1.2841
+  weight sum                  26617   39960   42115
+  precision                  2.6207  2.6207  2.6207
+
+number_inpatient
+  mean                       0.9182  0.4275  1.2984
+  std. dev.                  1.4698  0.9423  1.9847
+  weight sum                  26617   39960   42115
+  precision                  1.1053  1.1053  1.1053
+
+number_diagnoses
+  mean                       7.7046  7.3431  7.7501
+  std. dev.                  1.7295   1.902  1.7008
+  weight sum                  26617   39960   42115
+  precision                       1       1       1
+
+
+Attribute mappings:
+
+Model attributes                    	    Incoming attributes
+------------------------------------	    ----------------
+(nominal) admission_type_id         	--> 4 (nominal) admission_type_id
+(nominal) discharge_disposition_id  	--> 5 (nominal) discharge_disposition_id
+(nominal) admission_source_id       	--> 6 (nominal) admission_source_id
+(numeric) num_procedures            	--> 9 (numeric) num_procedures
+(numeric) number_outpatient         	--> 11 (numeric) number_outpatient
+(numeric) number_emergency          	--> 12 (numeric) number_emergency
+(numeric) number_inpatient          	--> 13 (numeric) number_inpatient
+(numeric) number_diagnoses          	--> 17 (numeric) number_diagnoses
+(nominal) readmitted                	--> 23 (nominal) readmitted
+
+
+Time taken to build model: 0.16 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.23 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       12173               52.8044 %
+Incorrectly Classified Instances     10880               47.1956 %
+Kappa statistic                          0.1192
+Mean absolute error                      0.3676
+Root mean squared error                  0.4583
+Relative absolute error                 81.939  %
+Root relative squared error             95.5017 %
+Coverage of cases (0.95 level)          96.9375 %
+Mean rel. region size (0.95 level)      94.5416 %
+Total Number of Instances            23053     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.057    0.034    0.475      0.057    0.102      0.056    0.615     0.438     >30
+                 0.882    0.715    0.588      0.882    0.706      0.209    0.661     0.692     NO
+                 0.303    0.134    0.226      0.303    0.259      0.149    0.654     0.215     <30
+Weighted Avg.    0.528    0.411    0.507      0.528    0.444      0.149    0.644     0.548     
+
+=== Confusion Matrix ===
+
+     a     b     c   <-- classified as
+   461  5906  1665 |     a = >30
+   392 10912  1074 |     b = NO
+   117  1726   800 |     c = <30
+

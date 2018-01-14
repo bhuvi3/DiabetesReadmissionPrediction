@@ -1,0 +1,120 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 40 -T 0 -C 0.6 -D 5.0E-4 -U 1.0 -M 1.0E-4 -S -1.0 -c -1
+Relation:     diabetic_data_normalized-weka.filters.unsupervised.attribute.NumericToNominal-R1,2,7,8,9-weka.filters.unsupervised.attribute.StringToNominal-R19,20,21-weka.filters.unsupervised.attribute.Remove-R1-2-weka.filters.unsupervised.attribute.NumericToNominal-R3,4-weka.filters.unsupervised.attribute.Remove-R11-16-weka.filters.unsupervised.attribute.NumericToNominal-R8-weka.filters.unsupervised.attribute.Remove-R14
+Instances:    30000
+Attributes:   41
+              race
+              gender
+              age
+              weight
+              admission_type_id
+              discharge_disposition_id
+              admission_source_id
+              time_in_hospital
+              payer_code
+              medical_specialty
+              diag_1
+              diag_2
+              diag_3
+              max_glu_serum
+              A1Cresult
+              metformin
+              repaglinide
+              nateglinide
+              chlorpropamide
+              glimepiride
+              acetohexamide
+              glipizide
+              glyburide
+              tolbutamide
+              pioglitazone
+              rosiglitazone
+              acarbose
+              miglitol
+              troglitazone
+              tolazamide
+              examide
+              citoglipton
+              insulin
+              glyburide-metformin
+              glipizide-metformin
+              glimepiride-pioglitazone
+              metformin-rosiglitazone
+              metformin-pioglitazone
+              change
+              diabetesMed
+              readmitted
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 1 (29985 instances)
+Minimum metric <confidence>: 0.6
+Number of cycles performed: 1
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 10
+
+Size of set of large itemsets L(2): 45
+
+Size of set of large itemsets L(3): 117
+
+Size of set of large itemsets L(4): 192
+
+Size of set of large itemsets L(5): 206
+
+Size of set of large itemsets L(6): 145
+
+Size of set of large itemsets L(7): 65
+
+Size of set of large itemsets L(8): 17
+
+Size of set of large itemsets L(9): 2
+
+Best rules found:
+
+ 1. citoglipton=No 30000 ==> examide=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 2. examide=No 30000 ==> citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 3. glimepiride-pioglitazone=No 30000 ==> examide=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 4. examide=No 30000 ==> glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 5. metformin-rosiglitazone=No 30000 ==> examide=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 6. examide=No 30000 ==> metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 7. metformin-pioglitazone=No 30000 ==> examide=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 8. examide=No 30000 ==> metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 9. glimepiride-pioglitazone=No 30000 ==> citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+10. citoglipton=No 30000 ==> glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+11. metformin-rosiglitazone=No 30000 ==> citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+12. citoglipton=No 30000 ==> metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+13. metformin-pioglitazone=No 30000 ==> citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+14. citoglipton=No 30000 ==> metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+15. metformin-rosiglitazone=No 30000 ==> glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+16. glimepiride-pioglitazone=No 30000 ==> metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+17. metformin-pioglitazone=No 30000 ==> glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+18. glimepiride-pioglitazone=No 30000 ==> metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+19. metformin-pioglitazone=No 30000 ==> metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+20. metformin-rosiglitazone=No 30000 ==> metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+21. citoglipton=No glimepiride-pioglitazone=No 30000 ==> examide=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+22. examide=No glimepiride-pioglitazone=No 30000 ==> citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+23. examide=No citoglipton=No 30000 ==> glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+24. glimepiride-pioglitazone=No 30000 ==> examide=No citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+25. citoglipton=No 30000 ==> examide=No glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+26. examide=No 30000 ==> citoglipton=No glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+27. citoglipton=No metformin-rosiglitazone=No 30000 ==> examide=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+28. examide=No metformin-rosiglitazone=No 30000 ==> citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+29. examide=No citoglipton=No 30000 ==> metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+30. metformin-rosiglitazone=No 30000 ==> examide=No citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+31. citoglipton=No 30000 ==> examide=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+32. examide=No 30000 ==> citoglipton=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+33. citoglipton=No metformin-pioglitazone=No 30000 ==> examide=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+34. examide=No metformin-pioglitazone=No 30000 ==> citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+35. examide=No citoglipton=No 30000 ==> metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+36. metformin-pioglitazone=No 30000 ==> examide=No citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+37. citoglipton=No 30000 ==> examide=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+38. examide=No 30000 ==> citoglipton=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+39. glimepiride-pioglitazone=No metformin-rosiglitazone=No 30000 ==> examide=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+40. examide=No metformin-rosiglitazone=No 30000 ==> glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+

@@ -1,0 +1,65 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -I 10 -K 0 -S 1 -num-slots 1
+Relation:     diabetic_data_normalized-weka.filters.unsupervised.attribute.NumericToNominal-R1,2,7,8,9-weka.filters.unsupervised.attribute.StringToNominal-R19,20,21-weka.filters.unsupervised.attribute.Remove-R1-2
+Instances:    30000
+Attributes:   48
+              race
+              gender
+              age
+              weight
+              admission_type_id
+              discharge_disposition_id
+              admission_source_id
+              time_in_hospital
+              payer_code
+              medical_specialty
+              num_lab_procedures
+              num_procedures
+              num_medications
+              number_outpatient
+              number_emergency
+              number_inpatient
+              diag_1
+              diag_2
+              diag_3
+              number_diagnoses
+              max_glu_serum
+              A1Cresult
+              metformin
+              repaglinide
+              nateglinide
+              chlorpropamide
+              glimepiride
+              acetohexamide
+              glipizide
+              glyburide
+              tolbutamide
+              pioglitazone
+              rosiglitazone
+              acarbose
+              miglitol
+              troglitazone
+              tolazamide
+              examide
+              citoglipton
+              insulin
+              glyburide-metformin
+              glipizide-metformin
+              glimepiride-pioglitazone
+              metformin-rosiglitazone
+              metformin-pioglitazone
+              change
+              diabetesMed
+              readmitted
+Test mode:    split 70.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+Random forest of 10 trees, each constructed while considering 6 random features.
+Out of bag error: 0.5522
+
+
+
+Time taken to build model: 11.33 seconds
+

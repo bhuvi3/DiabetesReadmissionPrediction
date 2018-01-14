@@ -1,0 +1,380 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 300 -T 0 -C 0.8 -D 5.0E-4 -U 1.0 -M 1.0E-4 -S -1.0 -c -1
+Relation:     diabetic_data_normalized-weka.filters.unsupervised.attribute.NumericToNominal-R1,2,7,8,9-weka.filters.unsupervised.attribute.StringToNominal-R19,20,21-weka.filters.unsupervised.attribute.Remove-R1-2-weka.filters.unsupervised.attribute.NumericToNominal-R3,4-weka.filters.unsupervised.attribute.Remove-R11-16-weka.filters.unsupervised.attribute.NumericToNominal-R8-weka.filters.unsupervised.attribute.Remove-R14
+Instances:    30000
+Attributes:   41
+              race
+              gender
+              age
+              weight
+              admission_type_id
+              discharge_disposition_id
+              admission_source_id
+              time_in_hospital
+              payer_code
+              medical_specialty
+              diag_1
+              diag_2
+              diag_3
+              max_glu_serum
+              A1Cresult
+              metformin
+              repaglinide
+              nateglinide
+              chlorpropamide
+              glimepiride
+              acetohexamide
+              glipizide
+              glyburide
+              tolbutamide
+              pioglitazone
+              rosiglitazone
+              acarbose
+              miglitol
+              troglitazone
+              tolazamide
+              examide
+              citoglipton
+              insulin
+              glyburide-metformin
+              glipizide-metformin
+              glimepiride-pioglitazone
+              metformin-rosiglitazone
+              metformin-pioglitazone
+              change
+              diabetesMed
+              readmitted
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 1 (29985 instances)
+Minimum metric <confidence>: 0.8
+Number of cycles performed: 1
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 10
+
+Size of set of large itemsets L(2): 45
+
+Size of set of large itemsets L(3): 117
+
+Size of set of large itemsets L(4): 192
+
+Size of set of large itemsets L(5): 206
+
+Size of set of large itemsets L(6): 145
+
+Size of set of large itemsets L(7): 65
+
+Size of set of large itemsets L(8): 17
+
+Size of set of large itemsets L(9): 2
+
+Best rules found:
+
+  1. citoglipton=No 30000 ==> examide=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+  2. examide=No 30000 ==> citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+  3. glimepiride-pioglitazone=No 30000 ==> examide=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+  4. examide=No 30000 ==> glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+  5. metformin-rosiglitazone=No 30000 ==> examide=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+  6. examide=No 30000 ==> metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+  7. metformin-pioglitazone=No 30000 ==> examide=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+  8. examide=No 30000 ==> metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+  9. glimepiride-pioglitazone=No 30000 ==> citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 10. citoglipton=No 30000 ==> glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 11. metformin-rosiglitazone=No 30000 ==> citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 12. citoglipton=No 30000 ==> metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 13. metformin-pioglitazone=No 30000 ==> citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 14. citoglipton=No 30000 ==> metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 15. metformin-rosiglitazone=No 30000 ==> glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 16. glimepiride-pioglitazone=No 30000 ==> metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 17. metformin-pioglitazone=No 30000 ==> glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 18. glimepiride-pioglitazone=No 30000 ==> metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 19. metformin-pioglitazone=No 30000 ==> metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 20. metformin-rosiglitazone=No 30000 ==> metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 21. citoglipton=No glimepiride-pioglitazone=No 30000 ==> examide=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 22. examide=No glimepiride-pioglitazone=No 30000 ==> citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 23. examide=No citoglipton=No 30000 ==> glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 24. glimepiride-pioglitazone=No 30000 ==> examide=No citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 25. citoglipton=No 30000 ==> examide=No glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 26. examide=No 30000 ==> citoglipton=No glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 27. citoglipton=No metformin-rosiglitazone=No 30000 ==> examide=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 28. examide=No metformin-rosiglitazone=No 30000 ==> citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 29. examide=No citoglipton=No 30000 ==> metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 30. metformin-rosiglitazone=No 30000 ==> examide=No citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 31. citoglipton=No 30000 ==> examide=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 32. examide=No 30000 ==> citoglipton=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 33. citoglipton=No metformin-pioglitazone=No 30000 ==> examide=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 34. examide=No metformin-pioglitazone=No 30000 ==> citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 35. examide=No citoglipton=No 30000 ==> metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 36. metformin-pioglitazone=No 30000 ==> examide=No citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 37. citoglipton=No 30000 ==> examide=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 38. examide=No 30000 ==> citoglipton=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 39. glimepiride-pioglitazone=No metformin-rosiglitazone=No 30000 ==> examide=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 40. examide=No metformin-rosiglitazone=No 30000 ==> glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 41. examide=No glimepiride-pioglitazone=No 30000 ==> metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 42. metformin-rosiglitazone=No 30000 ==> examide=No glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 43. glimepiride-pioglitazone=No 30000 ==> examide=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 44. examide=No 30000 ==> glimepiride-pioglitazone=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 45. glimepiride-pioglitazone=No metformin-pioglitazone=No 30000 ==> examide=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 46. examide=No metformin-pioglitazone=No 30000 ==> glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 47. examide=No glimepiride-pioglitazone=No 30000 ==> metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 48. metformin-pioglitazone=No 30000 ==> examide=No glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 49. glimepiride-pioglitazone=No 30000 ==> examide=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 50. examide=No 30000 ==> glimepiride-pioglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 51. metformin-rosiglitazone=No metformin-pioglitazone=No 30000 ==> examide=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 52. examide=No metformin-pioglitazone=No 30000 ==> metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 53. examide=No metformin-rosiglitazone=No 30000 ==> metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 54. metformin-pioglitazone=No 30000 ==> examide=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 55. metformin-rosiglitazone=No 30000 ==> examide=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 56. examide=No 30000 ==> metformin-rosiglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 57. glimepiride-pioglitazone=No metformin-rosiglitazone=No 30000 ==> citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 58. citoglipton=No metformin-rosiglitazone=No 30000 ==> glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 59. citoglipton=No glimepiride-pioglitazone=No 30000 ==> metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 60. metformin-rosiglitazone=No 30000 ==> citoglipton=No glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 61. glimepiride-pioglitazone=No 30000 ==> citoglipton=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 62. citoglipton=No 30000 ==> glimepiride-pioglitazone=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 63. glimepiride-pioglitazone=No metformin-pioglitazone=No 30000 ==> citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 64. citoglipton=No metformin-pioglitazone=No 30000 ==> glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 65. citoglipton=No glimepiride-pioglitazone=No 30000 ==> metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 66. metformin-pioglitazone=No 30000 ==> citoglipton=No glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 67. glimepiride-pioglitazone=No 30000 ==> citoglipton=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 68. citoglipton=No 30000 ==> glimepiride-pioglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 69. metformin-rosiglitazone=No metformin-pioglitazone=No 30000 ==> citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 70. citoglipton=No metformin-pioglitazone=No 30000 ==> metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 71. citoglipton=No metformin-rosiglitazone=No 30000 ==> metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 72. metformin-pioglitazone=No 30000 ==> citoglipton=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 73. metformin-rosiglitazone=No 30000 ==> citoglipton=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 74. citoglipton=No 30000 ==> metformin-rosiglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 75. metformin-rosiglitazone=No metformin-pioglitazone=No 30000 ==> glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 76. glimepiride-pioglitazone=No metformin-pioglitazone=No 30000 ==> metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 77. glimepiride-pioglitazone=No metformin-rosiglitazone=No 30000 ==> metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 78. metformin-pioglitazone=No 30000 ==> glimepiride-pioglitazone=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 79. metformin-rosiglitazone=No 30000 ==> glimepiride-pioglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 80. glimepiride-pioglitazone=No 30000 ==> metformin-rosiglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 81. citoglipton=No glimepiride-pioglitazone=No metformin-rosiglitazone=No 30000 ==> examide=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 82. examide=No glimepiride-pioglitazone=No metformin-rosiglitazone=No 30000 ==> citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 83. examide=No citoglipton=No metformin-rosiglitazone=No 30000 ==> glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 84. examide=No citoglipton=No glimepiride-pioglitazone=No 30000 ==> metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 85. glimepiride-pioglitazone=No metformin-rosiglitazone=No 30000 ==> examide=No citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 86. citoglipton=No metformin-rosiglitazone=No 30000 ==> examide=No glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 87. citoglipton=No glimepiride-pioglitazone=No 30000 ==> examide=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 88. examide=No metformin-rosiglitazone=No 30000 ==> citoglipton=No glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 89. examide=No glimepiride-pioglitazone=No 30000 ==> citoglipton=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 90. examide=No citoglipton=No 30000 ==> glimepiride-pioglitazone=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 91. metformin-rosiglitazone=No 30000 ==> examide=No citoglipton=No glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 92. glimepiride-pioglitazone=No 30000 ==> examide=No citoglipton=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 93. citoglipton=No 30000 ==> examide=No glimepiride-pioglitazone=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 94. examide=No 30000 ==> citoglipton=No glimepiride-pioglitazone=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 95. citoglipton=No glimepiride-pioglitazone=No metformin-pioglitazone=No 30000 ==> examide=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 96. examide=No glimepiride-pioglitazone=No metformin-pioglitazone=No 30000 ==> citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 97. examide=No citoglipton=No metformin-pioglitazone=No 30000 ==> glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 98. examide=No citoglipton=No glimepiride-pioglitazone=No 30000 ==> metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 99. glimepiride-pioglitazone=No metformin-pioglitazone=No 30000 ==> examide=No citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+100. citoglipton=No metformin-pioglitazone=No 30000 ==> examide=No glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+101. citoglipton=No glimepiride-pioglitazone=No 30000 ==> examide=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+102. examide=No metformin-pioglitazone=No 30000 ==> citoglipton=No glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+103. examide=No glimepiride-pioglitazone=No 30000 ==> citoglipton=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+104. examide=No citoglipton=No 30000 ==> glimepiride-pioglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+105. metformin-pioglitazone=No 30000 ==> examide=No citoglipton=No glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+106. glimepiride-pioglitazone=No 30000 ==> examide=No citoglipton=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+107. citoglipton=No 30000 ==> examide=No glimepiride-pioglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+108. examide=No 30000 ==> citoglipton=No glimepiride-pioglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+109. citoglipton=No metformin-rosiglitazone=No metformin-pioglitazone=No 30000 ==> examide=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+110. examide=No metformin-rosiglitazone=No metformin-pioglitazone=No 30000 ==> citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+111. examide=No citoglipton=No metformin-pioglitazone=No 30000 ==> metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+112. examide=No citoglipton=No metformin-rosiglitazone=No 30000 ==> metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+113. metformin-rosiglitazone=No metformin-pioglitazone=No 30000 ==> examide=No citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+114. citoglipton=No metformin-pioglitazone=No 30000 ==> examide=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+115. citoglipton=No metformin-rosiglitazone=No 30000 ==> examide=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+116. examide=No metformin-pioglitazone=No 30000 ==> citoglipton=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+117. examide=No metformin-rosiglitazone=No 30000 ==> citoglipton=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+118. examide=No citoglipton=No 30000 ==> metformin-rosiglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+119. metformin-pioglitazone=No 30000 ==> examide=No citoglipton=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+120. metformin-rosiglitazone=No 30000 ==> examide=No citoglipton=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+121. citoglipton=No 30000 ==> examide=No metformin-rosiglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+122. examide=No 30000 ==> citoglipton=No metformin-rosiglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+123. glimepiride-pioglitazone=No metformin-rosiglitazone=No metformin-pioglitazone=No 30000 ==> examide=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+124. examide=No metformin-rosiglitazone=No metformin-pioglitazone=No 30000 ==> glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+125. examide=No glimepiride-pioglitazone=No metformin-pioglitazone=No 30000 ==> metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+126. examide=No glimepiride-pioglitazone=No metformin-rosiglitazone=No 30000 ==> metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+127. metformin-rosiglitazone=No metformin-pioglitazone=No 30000 ==> examide=No glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+128. glimepiride-pioglitazone=No metformin-pioglitazone=No 30000 ==> examide=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+129. glimepiride-pioglitazone=No metformin-rosiglitazone=No 30000 ==> examide=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+130. examide=No metformin-pioglitazone=No 30000 ==> glimepiride-pioglitazone=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+131. examide=No metformin-rosiglitazone=No 30000 ==> glimepiride-pioglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+132. examide=No glimepiride-pioglitazone=No 30000 ==> metformin-rosiglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+133. metformin-pioglitazone=No 30000 ==> examide=No glimepiride-pioglitazone=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+134. metformin-rosiglitazone=No 30000 ==> examide=No glimepiride-pioglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+135. glimepiride-pioglitazone=No 30000 ==> examide=No metformin-rosiglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+136. examide=No 30000 ==> glimepiride-pioglitazone=No metformin-rosiglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+137. glimepiride-pioglitazone=No metformin-rosiglitazone=No metformin-pioglitazone=No 30000 ==> citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+138. citoglipton=No metformin-rosiglitazone=No metformin-pioglitazone=No 30000 ==> glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+139. citoglipton=No glimepiride-pioglitazone=No metformin-pioglitazone=No 30000 ==> metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+140. citoglipton=No glimepiride-pioglitazone=No metformin-rosiglitazone=No 30000 ==> metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+141. metformin-rosiglitazone=No metformin-pioglitazone=No 30000 ==> citoglipton=No glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+142. glimepiride-pioglitazone=No metformin-pioglitazone=No 30000 ==> citoglipton=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+143. glimepiride-pioglitazone=No metformin-rosiglitazone=No 30000 ==> citoglipton=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+144. citoglipton=No metformin-pioglitazone=No 30000 ==> glimepiride-pioglitazone=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+145. citoglipton=No metformin-rosiglitazone=No 30000 ==> glimepiride-pioglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+146. citoglipton=No glimepiride-pioglitazone=No 30000 ==> metformin-rosiglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+147. metformin-pioglitazone=No 30000 ==> citoglipton=No glimepiride-pioglitazone=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+148. metformin-rosiglitazone=No 30000 ==> citoglipton=No glimepiride-pioglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+149. glimepiride-pioglitazone=No 30000 ==> citoglipton=No metformin-rosiglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+150. citoglipton=No 30000 ==> glimepiride-pioglitazone=No metformin-rosiglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+151. citoglipton=No glimepiride-pioglitazone=No metformin-rosiglitazone=No metformin-pioglitazone=No 30000 ==> examide=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+152. examide=No glimepiride-pioglitazone=No metformin-rosiglitazone=No metformin-pioglitazone=No 30000 ==> citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+153. examide=No citoglipton=No metformin-rosiglitazone=No metformin-pioglitazone=No 30000 ==> glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+154. examide=No citoglipton=No glimepiride-pioglitazone=No metformin-pioglitazone=No 30000 ==> metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+155. examide=No citoglipton=No glimepiride-pioglitazone=No metformin-rosiglitazone=No 30000 ==> metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+156. glimepiride-pioglitazone=No metformin-rosiglitazone=No metformin-pioglitazone=No 30000 ==> examide=No citoglipton=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+157. citoglipton=No metformin-rosiglitazone=No metformin-pioglitazone=No 30000 ==> examide=No glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+158. citoglipton=No glimepiride-pioglitazone=No metformin-pioglitazone=No 30000 ==> examide=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+159. citoglipton=No glimepiride-pioglitazone=No metformin-rosiglitazone=No 30000 ==> examide=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+160. examide=No metformin-rosiglitazone=No metformin-pioglitazone=No 30000 ==> citoglipton=No glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+161. examide=No glimepiride-pioglitazone=No metformin-pioglitazone=No 30000 ==> citoglipton=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+162. examide=No glimepiride-pioglitazone=No metformin-rosiglitazone=No 30000 ==> citoglipton=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+163. examide=No citoglipton=No metformin-pioglitazone=No 30000 ==> glimepiride-pioglitazone=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+164. examide=No citoglipton=No metformin-rosiglitazone=No 30000 ==> glimepiride-pioglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+165. examide=No citoglipton=No glimepiride-pioglitazone=No 30000 ==> metformin-rosiglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+166. metformin-rosiglitazone=No metformin-pioglitazone=No 30000 ==> examide=No citoglipton=No glimepiride-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+167. glimepiride-pioglitazone=No metformin-pioglitazone=No 30000 ==> examide=No citoglipton=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+168. glimepiride-pioglitazone=No metformin-rosiglitazone=No 30000 ==> examide=No citoglipton=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+169. citoglipton=No metformin-pioglitazone=No 30000 ==> examide=No glimepiride-pioglitazone=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+170. citoglipton=No metformin-rosiglitazone=No 30000 ==> examide=No glimepiride-pioglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+171. citoglipton=No glimepiride-pioglitazone=No 30000 ==> examide=No metformin-rosiglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+172. examide=No metformin-pioglitazone=No 30000 ==> citoglipton=No glimepiride-pioglitazone=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+173. examide=No metformin-rosiglitazone=No 30000 ==> citoglipton=No glimepiride-pioglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+174. examide=No glimepiride-pioglitazone=No 30000 ==> citoglipton=No metformin-rosiglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+175. examide=No citoglipton=No 30000 ==> glimepiride-pioglitazone=No metformin-rosiglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+176. metformin-pioglitazone=No 30000 ==> examide=No citoglipton=No glimepiride-pioglitazone=No metformin-rosiglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+177. metformin-rosiglitazone=No 30000 ==> examide=No citoglipton=No glimepiride-pioglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+178. glimepiride-pioglitazone=No 30000 ==> examide=No citoglipton=No metformin-rosiglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+179. citoglipton=No 30000 ==> examide=No glimepiride-pioglitazone=No metformin-rosiglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+180. examide=No 30000 ==> citoglipton=No glimepiride-pioglitazone=No metformin-rosiglitazone=No metformin-pioglitazone=No 30000    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+181. acetohexamide=No 29999 ==> examide=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+182. acetohexamide=No 29999 ==> citoglipton=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+183. acetohexamide=No 29999 ==> glimepiride-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+184. acetohexamide=No 29999 ==> metformin-rosiglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+185. acetohexamide=No 29999 ==> metformin-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+186. glipizide-metformin=No 29999 ==> examide=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+187. glipizide-metformin=No 29999 ==> citoglipton=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+188. glipizide-metformin=No 29999 ==> glimepiride-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+189. glipizide-metformin=No 29999 ==> metformin-rosiglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+190. glipizide-metformin=No 29999 ==> metformin-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+191. acetohexamide=No citoglipton=No 29999 ==> examide=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+192. acetohexamide=No examide=No 29999 ==> citoglipton=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+193. acetohexamide=No 29999 ==> examide=No citoglipton=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+194. acetohexamide=No glimepiride-pioglitazone=No 29999 ==> examide=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+195. acetohexamide=No examide=No 29999 ==> glimepiride-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+196. acetohexamide=No 29999 ==> examide=No glimepiride-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+197. acetohexamide=No metformin-rosiglitazone=No 29999 ==> examide=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+198. acetohexamide=No examide=No 29999 ==> metformin-rosiglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+199. acetohexamide=No 29999 ==> examide=No metformin-rosiglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+200. acetohexamide=No metformin-pioglitazone=No 29999 ==> examide=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+201. acetohexamide=No examide=No 29999 ==> metformin-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+202. acetohexamide=No 29999 ==> examide=No metformin-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+203. acetohexamide=No glimepiride-pioglitazone=No 29999 ==> citoglipton=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+204. acetohexamide=No citoglipton=No 29999 ==> glimepiride-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+205. acetohexamide=No 29999 ==> citoglipton=No glimepiride-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+206. acetohexamide=No metformin-rosiglitazone=No 29999 ==> citoglipton=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+207. acetohexamide=No citoglipton=No 29999 ==> metformin-rosiglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+208. acetohexamide=No 29999 ==> citoglipton=No metformin-rosiglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+209. acetohexamide=No metformin-pioglitazone=No 29999 ==> citoglipton=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+210. acetohexamide=No citoglipton=No 29999 ==> metformin-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+211. acetohexamide=No 29999 ==> citoglipton=No metformin-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+212. acetohexamide=No metformin-rosiglitazone=No 29999 ==> glimepiride-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+213. acetohexamide=No glimepiride-pioglitazone=No 29999 ==> metformin-rosiglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+214. acetohexamide=No 29999 ==> glimepiride-pioglitazone=No metformin-rosiglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+215. acetohexamide=No metformin-pioglitazone=No 29999 ==> glimepiride-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+216. acetohexamide=No glimepiride-pioglitazone=No 29999 ==> metformin-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+217. acetohexamide=No 29999 ==> glimepiride-pioglitazone=No metformin-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+218. acetohexamide=No metformin-pioglitazone=No 29999 ==> metformin-rosiglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+219. acetohexamide=No metformin-rosiglitazone=No 29999 ==> metformin-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+220. acetohexamide=No 29999 ==> metformin-rosiglitazone=No metformin-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+221. citoglipton=No glipizide-metformin=No 29999 ==> examide=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+222. examide=No glipizide-metformin=No 29999 ==> citoglipton=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+223. glipizide-metformin=No 29999 ==> examide=No citoglipton=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+224. glipizide-metformin=No glimepiride-pioglitazone=No 29999 ==> examide=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+225. examide=No glipizide-metformin=No 29999 ==> glimepiride-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+226. glipizide-metformin=No 29999 ==> examide=No glimepiride-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+227. glipizide-metformin=No metformin-rosiglitazone=No 29999 ==> examide=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+228. examide=No glipizide-metformin=No 29999 ==> metformin-rosiglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+229. glipizide-metformin=No 29999 ==> examide=No metformin-rosiglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+230. glipizide-metformin=No metformin-pioglitazone=No 29999 ==> examide=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+231. examide=No glipizide-metformin=No 29999 ==> metformin-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+232. glipizide-metformin=No 29999 ==> examide=No metformin-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+233. glipizide-metformin=No glimepiride-pioglitazone=No 29999 ==> citoglipton=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+234. citoglipton=No glipizide-metformin=No 29999 ==> glimepiride-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+235. glipizide-metformin=No 29999 ==> citoglipton=No glimepiride-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+236. glipizide-metformin=No metformin-rosiglitazone=No 29999 ==> citoglipton=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+237. citoglipton=No glipizide-metformin=No 29999 ==> metformin-rosiglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+238. glipizide-metformin=No 29999 ==> citoglipton=No metformin-rosiglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+239. glipizide-metformin=No metformin-pioglitazone=No 29999 ==> citoglipton=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+240. citoglipton=No glipizide-metformin=No 29999 ==> metformin-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+241. glipizide-metformin=No 29999 ==> citoglipton=No metformin-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+242. glipizide-metformin=No metformin-rosiglitazone=No 29999 ==> glimepiride-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+243. glipizide-metformin=No glimepiride-pioglitazone=No 29999 ==> metformin-rosiglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+244. glipizide-metformin=No 29999 ==> glimepiride-pioglitazone=No metformin-rosiglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+245. glipizide-metformin=No metformin-pioglitazone=No 29999 ==> glimepiride-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+246. glipizide-metformin=No glimepiride-pioglitazone=No 29999 ==> metformin-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+247. glipizide-metformin=No 29999 ==> glimepiride-pioglitazone=No metformin-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+248. glipizide-metformin=No metformin-pioglitazone=No 29999 ==> metformin-rosiglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+249. glipizide-metformin=No metformin-rosiglitazone=No 29999 ==> metformin-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+250. glipizide-metformin=No 29999 ==> metformin-rosiglitazone=No metformin-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+251. acetohexamide=No citoglipton=No glimepiride-pioglitazone=No 29999 ==> examide=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+252. acetohexamide=No examide=No glimepiride-pioglitazone=No 29999 ==> citoglipton=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+253. acetohexamide=No examide=No citoglipton=No 29999 ==> glimepiride-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+254. acetohexamide=No glimepiride-pioglitazone=No 29999 ==> examide=No citoglipton=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+255. acetohexamide=No citoglipton=No 29999 ==> examide=No glimepiride-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+256. acetohexamide=No examide=No 29999 ==> citoglipton=No glimepiride-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+257. acetohexamide=No 29999 ==> examide=No citoglipton=No glimepiride-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+258. acetohexamide=No citoglipton=No metformin-rosiglitazone=No 29999 ==> examide=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+259. acetohexamide=No examide=No metformin-rosiglitazone=No 29999 ==> citoglipton=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+260. acetohexamide=No examide=No citoglipton=No 29999 ==> metformin-rosiglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+261. acetohexamide=No metformin-rosiglitazone=No 29999 ==> examide=No citoglipton=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+262. acetohexamide=No citoglipton=No 29999 ==> examide=No metformin-rosiglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+263. acetohexamide=No examide=No 29999 ==> citoglipton=No metformin-rosiglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+264. acetohexamide=No 29999 ==> examide=No citoglipton=No metformin-rosiglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+265. acetohexamide=No citoglipton=No metformin-pioglitazone=No 29999 ==> examide=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+266. acetohexamide=No examide=No metformin-pioglitazone=No 29999 ==> citoglipton=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+267. acetohexamide=No examide=No citoglipton=No 29999 ==> metformin-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+268. acetohexamide=No metformin-pioglitazone=No 29999 ==> examide=No citoglipton=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+269. acetohexamide=No citoglipton=No 29999 ==> examide=No metformin-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+270. acetohexamide=No examide=No 29999 ==> citoglipton=No metformin-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+271. acetohexamide=No 29999 ==> examide=No citoglipton=No metformin-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+272. acetohexamide=No glimepiride-pioglitazone=No metformin-rosiglitazone=No 29999 ==> examide=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+273. acetohexamide=No examide=No metformin-rosiglitazone=No 29999 ==> glimepiride-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+274. acetohexamide=No examide=No glimepiride-pioglitazone=No 29999 ==> metformin-rosiglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+275. acetohexamide=No metformin-rosiglitazone=No 29999 ==> examide=No glimepiride-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+276. acetohexamide=No glimepiride-pioglitazone=No 29999 ==> examide=No metformin-rosiglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+277. acetohexamide=No examide=No 29999 ==> glimepiride-pioglitazone=No metformin-rosiglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+278. acetohexamide=No 29999 ==> examide=No glimepiride-pioglitazone=No metformin-rosiglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+279. acetohexamide=No glimepiride-pioglitazone=No metformin-pioglitazone=No 29999 ==> examide=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+280. acetohexamide=No examide=No metformin-pioglitazone=No 29999 ==> glimepiride-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+281. acetohexamide=No examide=No glimepiride-pioglitazone=No 29999 ==> metformin-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+282. acetohexamide=No metformin-pioglitazone=No 29999 ==> examide=No glimepiride-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+283. acetohexamide=No glimepiride-pioglitazone=No 29999 ==> examide=No metformin-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+284. acetohexamide=No examide=No 29999 ==> glimepiride-pioglitazone=No metformin-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+285. acetohexamide=No 29999 ==> examide=No glimepiride-pioglitazone=No metformin-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+286. acetohexamide=No metformin-rosiglitazone=No metformin-pioglitazone=No 29999 ==> examide=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+287. acetohexamide=No examide=No metformin-pioglitazone=No 29999 ==> metformin-rosiglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+288. acetohexamide=No examide=No metformin-rosiglitazone=No 29999 ==> metformin-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+289. acetohexamide=No metformin-pioglitazone=No 29999 ==> examide=No metformin-rosiglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+290. acetohexamide=No metformin-rosiglitazone=No 29999 ==> examide=No metformin-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+291. acetohexamide=No examide=No 29999 ==> metformin-rosiglitazone=No metformin-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+292. acetohexamide=No 29999 ==> examide=No metformin-rosiglitazone=No metformin-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+293. acetohexamide=No glimepiride-pioglitazone=No metformin-rosiglitazone=No 29999 ==> citoglipton=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+294. acetohexamide=No citoglipton=No metformin-rosiglitazone=No 29999 ==> glimepiride-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+295. acetohexamide=No citoglipton=No glimepiride-pioglitazone=No 29999 ==> metformin-rosiglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+296. acetohexamide=No metformin-rosiglitazone=No 29999 ==> citoglipton=No glimepiride-pioglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+297. acetohexamide=No glimepiride-pioglitazone=No 29999 ==> citoglipton=No metformin-rosiglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+298. acetohexamide=No citoglipton=No 29999 ==> glimepiride-pioglitazone=No metformin-rosiglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+299. acetohexamide=No 29999 ==> citoglipton=No glimepiride-pioglitazone=No metformin-rosiglitazone=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+300. acetohexamide=No glimepiride-pioglitazone=No metformin-pioglitazone=No 29999 ==> citoglipton=No 29999    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+

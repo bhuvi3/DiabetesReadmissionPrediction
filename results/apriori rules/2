@@ -1,0 +1,37 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 10 -T 0 -C 0.8 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -c -1
+Relation:     diabetic_data_normalized-weka.filters.unsupervised.attribute.NumericToNominal-R1,2,7,8,9-weka.filters.unsupervised.attribute.StringToNominal-R19,20,21-weka.filters.unsupervised.attribute.Remove-R1-2-weka.filters.unsupervised.attribute.NumericToNominal-R3,4-weka.filters.unsupervised.attribute.Remove-R11-16-weka.filters.unsupervised.attribute.NumericToNominal-R8-weka.filters.unsupervised.attribute.Remove-R14-weka.filters.unsupervised.attribute.Remove-R16-38-weka.filters.unsupervised.attribute.Remove-R9-10-weka.filters.unsupervised.attribute.Remove-R5-7-weka.filters.unsupervised.attribute.Remove-R3-4-weka.filters.unsupervised.attribute.Remove-R3-weka.filters.unsupervised.attribute.Remove-R1-2-weka.filters.unsupervised.attribute.Remove-R1-3-weka.filters.unsupervised.attribute.Remove-R1-2
+Instances:    30000
+Attributes:   3
+              change
+              diabetesMed
+              readmitted
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.1 (3000 instances)
+Minimum metric <confidence>: 0.8
+Number of cycles performed: 18
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 7
+
+Size of set of large itemsets L(2): 13
+
+Size of set of large itemsets L(3): 7
+
+Best rules found:
+
+ 1. change=Ch 12284 ==> diabetesMed=Yes 12284    <conf:(1)> lift:(1.33) lev:(0.1) [3068] conv:(3068.95)
+ 2. diabetesMed=No 7495 ==> change=No 7495    <conf:(1)> lift:(1.69) lev:(0.1) [3068] conv:(3068.95)
+ 3. change=Ch readmitted=<30 4826 ==> diabetesMed=Yes 4826    <conf:(1)> lift:(1.33) lev:(0.04) [1205] conv:(1205.7)
+ 4. change=Ch readmitted=>30 3912 ==> diabetesMed=Yes 3912    <conf:(1)> lift:(1.33) lev:(0.03) [977] conv:(977.35)
+ 5. change=Ch readmitted=NO 3546 ==> diabetesMed=Yes 3546    <conf:(1)> lift:(1.33) lev:(0.03) [885] conv:(885.91)
+ 6. diabetesMed=No readmitted=NO 3070 ==> change=No 3070    <conf:(1)> lift:(1.69) lev:(0.04) [1257] conv:(1257.06)
+ 7. readmitted=<30 10000 ==> diabetesMed=Yes 8009    <conf:(0.8)> lift:(1.07) lev:(0.02) [507] conv:(1.25)
+

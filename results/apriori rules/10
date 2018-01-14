@@ -1,0 +1,47 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 10 -T 0 -C 0.9 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -c -1
+Relation:     diabetic_data_normalized-weka.filters.unsupervised.attribute.NumericToNominal-R1,2,7,8,9-weka.filters.unsupervised.attribute.StringToNominal-R19,20,21-weka.filters.unsupervised.attribute.Remove-R1-12,19-21,23-49-weka.filters.unsupervised.attribute.NumericToNominal-R1,2,3,4,5,6,7
+Instances:    101765
+Attributes:   8
+              num_lab_procedures
+              num_procedures
+              num_medications
+              number_outpatient
+              number_emergency
+              number_inpatient
+              number_diagnoses
+              readmitted
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.25 (25441 instances)
+Minimum metric <confidence>: 0.9
+Number of cycles performed: 15
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 7
+
+Size of set of large itemsets L(2): 14
+
+Size of set of large itemsets L(3): 10
+
+Size of set of large itemsets L(4): 1
+
+Best rules found:
+
+ 1. number_outpatient=0 number_inpatient=0 readmitted=NO 37206 ==> number_emergency=0 35625    <conf:(0.96)> lift:(1.08) lev:(0.03) [2580] conv:(2.63)
+ 2. number_inpatient=0 readmitted=NO 41596 ==> number_emergency=0 39431    <conf:(0.95)> lift:(1.07) lev:(0.02) [2487] conv:(2.15)
+ 3. number_outpatient=0 number_inpatient=0 59085 ==> number_emergency=0 55828    <conf:(0.94)> lift:(1.06) lev:(0.03) [3351] conv:(2.03)
+ 4. number_outpatient=0 readmitted=NO 47911 ==> number_emergency=0 44991    <conf:(0.94)> lift:(1.06) lev:(0.02) [2439] conv:(1.83)
+ 5. number_inpatient=0 67630 ==> number_emergency=0 63035    <conf:(0.93)> lift:(1.05) lev:(0.03) [2969] conv:(1.65)
+ 6. readmitted=NO 54863 ==> number_emergency=0 50709    <conf:(0.92)> lift:(1.04) lev:(0.02) [1982] conv:(1.48)
+ 7. num_procedures=0 number_inpatient=0 30027 ==> number_emergency=0 27732    <conf:(0.92)> lift:(1.04) lev:(0.01) [1063] conv:(1.46)
+ 8. number_inpatient=0 number_diagnoses=9 30122 ==> number_emergency=0 27580    <conf:(0.92)> lift:(1.03) lev:(0.01) [827] conv:(1.32)
+ 9. number_outpatient=0 85026 ==> number_emergency=0 77579    <conf:(0.91)> lift:(1.03) lev:(0.02) [2063] conv:(1.28)
+10. num_procedures=0 number_outpatient=0 38809 ==> number_emergency=0 35070    <conf:(0.9)> lift:(1.02) lev:(0.01) [602] conv:(1.16)
+

@@ -1,0 +1,74 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.MLPClassifier -N 2 -R 0.01 -O 1.0E-6 -P 1 -E 1 -S 1
+Relation:     scores_train-weka.filters.unsupervised.attribute.NumericToNominal-R4
+Instances:    18385
+Attributes:   4
+              RF
+              AB
+              NB
+              y
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+MLPClassifier with ridge value 0.01 and 2 hidden units (useCGD=false)
+
+Output unit 0 weight for hidden unit 0: 1.5282405468623679
+Output unit 1 weight for hidden unit 0: -1.5201341260402974
+
+Hidden unit 0 weights:
+
+-1.108748430205678 RF
+0.032793056174978644 AB
+0.4093703997037156 NB
+
+Hidden unit 0 bias: 0.12009637637031229
+
+Output unit 0 weight for hidden unit 1: 1.4416590140541705
+Output unit 1 weight for hidden unit 1: -1.4509749615458867
+
+Hidden unit 1 weights:
+
+-0.9751117549760989 RF
+0.13234273333997978 AB
+0.13920361256044336 NB
+
+Hidden unit 1 bias: 0.16220813273317322
+
+Output unit 0 bias: 0.46458901828491034
+Output unit 1 bias: -0.46406858306176096
+
+
+Time taken to build model: 0.68 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.2 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       16299               88.6538 %
+Incorrectly Classified Instances      2086               11.3462 %
+Kappa statistic                          0     
+Mean absolute error                      0.2005
+Root mean squared error                  0.3117
+Relative absolute error                 99.6279 %
+Root relative squared error             98.2699 %
+Coverage of cases (0.95 level)         100      %
+Mean rel. region size (0.95 level)     100      %
+Total Number of Instances            18385     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    1.000    0.887      1.000    0.940      0.000    0.647     0.928     0
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.647     0.203     1
+Weighted Avg.    0.887    0.887    0.786      0.887    0.833      0.000    0.647     0.846     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 16299     0 |     a = 0
+  2086     0 |     b = 1
+

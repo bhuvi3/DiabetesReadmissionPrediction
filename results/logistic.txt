@@ -1,0 +1,411 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M -1
+Relation:     diabetic_data_normalized-weka.filters.unsupervised.attribute.NumericToNominal-R1,2,7,8,9-weka.filters.unsupervised.attribute.StringToNominal-R19,20,21-weka.filters.unsupervised.attribute.Remove-R1-2-weka.filters.unsupervised.attribute.Remove-R17-19-weka.filters.unsupervised.attribute.Remove-R20-42
+Instances:    101765
+Attributes:   22
+              race
+              gender
+              age
+              weight
+              admission_type_id
+              discharge_disposition_id
+              admission_source_id
+              time_in_hospital
+              payer_code
+              medical_specialty
+              num_lab_procedures
+              num_procedures
+              num_medications
+              number_outpatient
+              number_emergency
+              number_inpatient
+              number_diagnoses
+              max_glu_serum
+              A1Cresult
+              change
+              diabetesMed
+              readmitted
+Test mode:    3-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                                                                           Class
+Variable                                                                      NO
+================================================================================
+race=AfricanAmerican                                                     -0.0075
+race=Caucasian                                                           -0.0026
+race=Other                                                                0.0881
+race=Asian                                                               -0.0113
+race=Hispanic                                                             0.0204
+gender=Female                                                             0.0143
+gender=Male                                                              -0.0173
+gender=Unknown/Invalid                                                   25.4837
+age                                                                      -0.0001
+weight                                                                    0.0015
+admission_type_id=1                                                       -0.016
+admission_type_id=2                                                      -0.0265
+admission_type_id=3                                                       0.0201
+admission_type_id=4                                                      -0.3588
+admission_type_id=5                                                       0.1583
+admission_type_id=6                                                      -0.1447
+admission_type_id=7                                                      22.7657
+admission_type_id=8                                                        0.085
+discharge_disposition_id=1                                               -0.3126
+discharge_disposition_id=2                                               -0.9176
+discharge_disposition_id=3                                               -0.7327
+discharge_disposition_id=4                                               -0.5693
+discharge_disposition_id=5                                               -1.3023
+discharge_disposition_id=6                                               -0.5208
+discharge_disposition_id=7                                               -0.6746
+discharge_disposition_id=8                                               -0.6817
+discharge_disposition_id=9                                               -2.0198
+discharge_disposition_id=10                                              21.1459
+discharge_disposition_id=11                                              19.4033
+discharge_disposition_id=12                                              -3.3135
+discharge_disposition_id=13                                               0.6701
+discharge_disposition_id=14                                               0.2926
+discharge_disposition_id=15                                               -2.145
+discharge_disposition_id=16                                              21.6378
+discharge_disposition_id=17                                              22.4798
+discharge_disposition_id=18                                              -0.6307
+discharge_disposition_id=19                                               44.612
+discharge_disposition_id=20                                              20.3192
+discharge_disposition_id=22                                              -1.6561
+discharge_disposition_id=23                                               0.1511
+discharge_disposition_id=24                                              -0.6797
+discharge_disposition_id=25                                              -0.2237
+discharge_disposition_id=27                                              19.5117
+discharge_disposition_id=28                                              -1.9944
+admission_source_id=1                                                    -0.0598
+admission_source_id=2                                                     0.1174
+admission_source_id=3                                                    -0.4138
+admission_source_id=4                                                     0.1168
+admission_source_id=5                                                     0.2042
+admission_source_id=6                                                     0.0275
+admission_source_id=7                                                    -0.0327
+admission_source_id=8                                                    -0.1048
+admission_source_id=9                                                    -0.2466
+admission_source_id=10                                                   23.2955
+admission_source_id=11                                                   26.7367
+admission_source_id=13                                                    24.258
+admission_source_id=14                                                   23.9211
+admission_source_id=17                                                      0.18
+admission_source_id=20                                                   -0.2503
+admission_source_id=22                                                   -0.2477
+admission_source_id=25                                                   25.6018
+time_in_hospital                                                         -0.0016
+payer_code=CM                                                             0.0798
+payer_code=HM                                                             0.0757
+payer_code=WC                                                             0.9576
+payer_code=UN                                                              0.023
+payer_code=MC                                                            -0.0696
+payer_code=DM                                                             0.0528
+payer_code=BC                                                             0.0994
+payer_code=CP                                                             0.1381
+payer_code=SP                                                            -0.0124
+payer_code=MD                                                             -0.032
+payer_code=CH                                                            -0.0076
+payer_code=OT                                                              0.407
+payer_code=SI                                                             -0.419
+payer_code=PO                                                             0.2216
+payer_code=OG                                                            -0.1497
+payer_code=MP                                                             0.0889
+payer_code=FR                                                            23.0101
+medical_specialty=Cardiology                                              0.1169
+medical_specialty=InternalMedicine                                       -0.1067
+medical_specialty=Surgery-General                                        -0.0561
+medical_specialty=Family/GeneralPractice                                 -0.1606
+medical_specialty=ObstetricsandGynecology                                 0.4455
+medical_specialty=Psychiatry                                             -0.2656
+medical_specialty=Pediatrics                                              0.3898
+medical_specialty=Dentistry                                              17.0239
+medical_specialty=Pediatrics-Endocrinology                                2.3251
+medical_specialty=Orthopedics                                             0.1094
+medical_specialty=Gastroenterology                                       -0.1826
+medical_specialty=Surgery-Cardiovascular/Thoracic                         0.4483
+medical_specialty=Nephrology                                             -0.3316
+medical_specialty=Orthopedics-Reconstructive                              0.4546
+medical_specialty=Emergency/Trauma                                        0.0411
+medical_specialty=Pulmonology                                            -0.0895
+medical_specialty=Surgery-Neuro                                           0.3167
+medical_specialty=Obsterics&Gynecology-GynecologicOnco                    0.1331
+medical_specialty=Hematology/Oncology                                    -0.8718
+medical_specialty=Otolaryngology                                          1.6852
+medical_specialty=Surgery-Colon&Rectal                                   -0.2137
+medical_specialty=Pediatrics-CriticalCare                                 0.7337
+medical_specialty=Endocrinology                                           0.6176
+medical_specialty=Urology                                                -0.1239
+medical_specialty=Psychiatry-Child/Adolescent                            -0.6897
+medical_specialty=Pediatrics-Pulmonology                                  0.4544
+medical_specialty=Neurology                                               0.5379
+medical_specialty=Anesthesiology-Pediatric                                 0.273
+medical_specialty=Radiology                                              -0.5948
+medical_specialty=Pediatrics-Hematology-Oncology                         -1.0835
+medical_specialty=Psychology                                              0.4086
+medical_specialty=Podiatry                                                 0.088
+medical_specialty=Gynecology                                             20.6565
+medical_specialty=Oncology                                                -0.677
+medical_specialty=Pediatrics-Neurology                                   23.2782
+medical_specialty=Surgery-Plastic                                        -0.5987
+medical_specialty=Surgery-Thoracic                                        -0.009
+medical_specialty=Surgery-PlasticwithinHeadandNeck                      174.3358
+medical_specialty=Ophthalmology                                           0.5183
+medical_specialty=Surgery-Pediatric                                      12.8743
+medical_specialty=Pediatrics-EmergencyMedicine                           22.8446
+medical_specialty=PhysicalMedicineandRehabilitation                      -0.3941
+medical_specialty=InfectiousDiseases                                     -0.9104
+medical_specialty=Anesthesiology                                         -0.0474
+medical_specialty=Rheumatology                                           -0.5043
+medical_specialty=AllergyandImmunology                                    -1.676
+medical_specialty=Surgery-Maxillofacial                                  -0.2456
+medical_specialty=Pediatrics-InfectiousDiseases                          26.6586
+medical_specialty=Pediatrics-AllergyandImmunology                        29.0181
+medical_specialty=Surgeon                                                 0.0057
+medical_specialty=Surgery-Vascular                                       -0.2535
+medical_specialty=Osteopath                                               0.4546
+medical_specialty=Psychiatry-Addictive                                   30.5363
+medical_specialty=Surgery-Cardiovascular                                   0.544
+medical_specialty=PhysicianNotFound                                      -0.8423
+medical_specialty=Hematology                                             -1.3028
+medical_specialty=Proctology                                             29.8396
+medical_specialty=Obstetrics                                               0.078
+medical_specialty=SurgicalSpecialty                                       0.2881
+medical_specialty=Radiologist                                              0.048
+medical_specialty=Pathology                                               0.9666
+medical_specialty=Dermatology                                            13.6236
+medical_specialty=SportsMedicine                                         39.8853
+medical_specialty=Speech                                                 25.1322
+medical_specialty=Hospitalist                                             0.4296
+medical_specialty=OutreachServices                                        0.1577
+medical_specialty=Cardiology-Pediatric                                   -0.8561
+medical_specialty=Perinatology                                           19.2421
+medical_specialty=Neurophysiology                                        28.1722
+medical_specialty=Endocrinology-Metabolism                               -0.5222
+medical_specialty=DCPTEAM                                                18.3357
+medical_specialty=Resident                                               -2.0345
+num_lab_procedures                                                       -0.0007
+num_procedures                                                            0.0017
+num_medications                                                          -0.0052
+number_outpatient                                                         0.0014
+number_emergency                                                         -0.0408
+number_inpatient                                                         -0.2629
+number_diagnoses                                                         -0.0387
+max_glu_serum=None                                                        0.1075
+max_glu_serum=>300                                                       -0.1364
+max_glu_serum=Norm                                                       -0.0656
+max_glu_serum=>200                                                       -0.1423
+A1Cresult=None                                                           -0.0632
+A1Cresult=>8                                                                0.04
+A1Cresult=>7                                                              0.0544
+A1Cresult=Norm                                                            0.0831
+change                                                                    0.0083
+diabetesMed                                                               0.1786
+Intercept                                                                 3.1152
+
+
+Odds Ratios...
+                                                                           Class
+Variable                                                                      NO
+================================================================================
+race=AfricanAmerican                                                      0.9925
+race=Caucasian                                                            0.9974
+race=Other                                                                1.0921
+race=Asian                                                                0.9888
+race=Hispanic                                                             1.0206
+gender=Female                                                             1.0144
+gender=Male                                                               0.9829
+gender=Unknown/Invalid                                     1.1680079977162648E11
+age                                                                       0.9999
+weight                                                                    1.0015
+admission_type_id=1                                                       0.9842
+admission_type_id=2                                                       0.9738
+admission_type_id=3                                                       1.0203
+admission_type_id=4                                                       0.6985
+admission_type_id=5                                                       1.1715
+admission_type_id=6                                                       0.8652
+admission_type_id=7                                               7709092513.243
+admission_type_id=8                                                       1.0888
+discharge_disposition_id=1                                                0.7316
+discharge_disposition_id=2                                                0.3995
+discharge_disposition_id=3                                                0.4806
+discharge_disposition_id=4                                                0.5659
+discharge_disposition_id=5                                                0.2719
+discharge_disposition_id=6                                                 0.594
+discharge_disposition_id=7                                                0.5093
+discharge_disposition_id=8                                                0.5058
+discharge_disposition_id=9                                                0.1327
+discharge_disposition_id=10                                      1525956995.2512
+discharge_disposition_id=11                                       267132938.6337
+discharge_disposition_id=12                                               0.0364
+discharge_disposition_id=13                                               1.9545
+discharge_disposition_id=14                                               1.3399
+discharge_disposition_id=15                                               0.1171
+discharge_disposition_id=16                                       2495726923.265
+discharge_disposition_id=17                                      5792417544.2128
+discharge_disposition_id=18                                               0.5322
+discharge_disposition_id=19                                2.3700678781776376E19
+discharge_disposition_id=20                                       667573762.0542
+discharge_disposition_id=22                                               0.1909
+discharge_disposition_id=23                                               1.1631
+discharge_disposition_id=24                                               0.5068
+discharge_disposition_id=25                                               0.7996
+discharge_disposition_id=27                                       297740168.8448
+discharge_disposition_id=28                                               0.1361
+admission_source_id=1                                                     0.9419
+admission_source_id=2                                                     1.1246
+admission_source_id=3                                                     0.6612
+admission_source_id=4                                                     1.1239
+admission_source_id=5                                                     1.2265
+admission_source_id=6                                                     1.0279
+admission_source_id=7                                                     0.9678
+admission_source_id=8                                                     0.9005
+admission_source_id=9                                                     0.7814
+admission_source_id=10                                     1.3094710254398113E10
+admission_source_id=11                                      4.089016292326251E11
+admission_source_id=13                                     3.4285929828403103E10
+admission_source_id=14                                     2.4478599021277298E10
+admission_source_id=17                                                    1.1972
+admission_source_id=20                                                    0.7785
+admission_source_id=22                                                    0.7806
+admission_source_id=25                                      1.314354873914564E11
+time_in_hospital                                                          0.9984
+payer_code=CM                                                             1.0831
+payer_code=HM                                                             1.0786
+payer_code=WC                                                             2.6055
+payer_code=UN                                                             1.0233
+payer_code=MC                                                             0.9327
+payer_code=DM                                                             1.0542
+payer_code=BC                                                             1.1045
+payer_code=CP                                                             1.1481
+payer_code=SP                                                             0.9877
+payer_code=MD                                                             0.9685
+payer_code=CH                                                             0.9925
+payer_code=OT                                                             1.5023
+payer_code=SI                                                             0.6577
+payer_code=PO                                                              1.248
+payer_code=OG                                                              0.861
+payer_code=MP                                                              1.093
+payer_code=FR                                                    9843331216.0966
+medical_specialty=Cardiology                                               1.124
+medical_specialty=InternalMedicine                                        0.8988
+medical_specialty=Surgery-General                                         0.9454
+medical_specialty=Family/GeneralPractice                                  0.8517
+medical_specialty=ObstetricsandGynecology                                 1.5612
+medical_specialty=Psychiatry                                              0.7667
+medical_specialty=Pediatrics                                              1.4767
+medical_specialty=Dentistry                                        24739842.0396
+medical_specialty=Pediatrics-Endocrinology                               10.2274
+medical_specialty=Orthopedics                                             1.1156
+medical_specialty=Gastroenterology                                        0.8331
+medical_specialty=Surgery-Cardiovascular/Thoracic                         1.5657
+medical_specialty=Nephrology                                              0.7178
+medical_specialty=Orthopedics-Reconstructive                              1.5756
+medical_specialty=Emergency/Trauma                                        1.0419
+medical_specialty=Pulmonology                                             0.9144
+medical_specialty=Surgery-Neuro                                           1.3725
+medical_specialty=Obsterics&Gynecology-GynecologicOnco                    1.1424
+medical_specialty=Hematology/Oncology                                     0.4182
+medical_specialty=Otolaryngology                                          5.3934
+medical_specialty=Surgery-Colon&Rectal                                    0.8076
+medical_specialty=Pediatrics-CriticalCare                                 2.0828
+medical_specialty=Endocrinology                                           1.8544
+medical_specialty=Urology                                                 0.8835
+medical_specialty=Psychiatry-Child/Adolescent                             0.5017
+medical_specialty=Pediatrics-Pulmonology                                  1.5753
+medical_specialty=Neurology                                               1.7125
+medical_specialty=Anesthesiology-Pediatric                                1.3138
+medical_specialty=Radiology                                               0.5517
+medical_specialty=Pediatrics-Hematology-Oncology                          0.3384
+medical_specialty=Psychology                                              1.5047
+medical_specialty=Podiatry                                                 1.092
+medical_specialty=Gynecology                                      935436586.1112
+medical_specialty=Oncology                                                0.5081
+medical_specialty=Pediatrics-Neurology                     1.2870809292153013E10
+medical_specialty=Surgery-Plastic                                         0.5495
+medical_specialty=Surgery-Thoracic                                         0.991
+medical_specialty=Surgery-PlasticwithinHeadandNeck          5.165298234095149E75
+medical_specialty=Ophthalmology                                           1.6792
+medical_specialty=Surgery-Pediatric                                  390161.5807
+medical_specialty=Pediatrics-EmergencyMedicine                   8341945995.5829
+medical_specialty=PhysicalMedicineandRehabilitation                       0.6743
+medical_specialty=InfectiousDiseases                                      0.4024
+medical_specialty=Anesthesiology                                          0.9537
+medical_specialty=Rheumatology                                             0.604
+medical_specialty=AllergyandImmunology                                    0.1871
+medical_specialty=Surgery-Maxillofacial                                   0.7822
+medical_specialty=Pediatrics-InfectiousDiseases            3.7816881470364075E11
+medical_specialty=Pediatrics-AllergyandImmunology           4.003107155407779E12
+medical_specialty=Surgeon                                                 1.0057
+medical_specialty=Surgery-Vascular                                        0.7761
+medical_specialty=Osteopath                                               1.5756
+medical_specialty=Psychiatry-Addictive                      1.826958313285981E13
+medical_specialty=Surgery-Cardiovascular                                  1.7228
+medical_specialty=PhysicianNotFound                                       0.4307
+medical_specialty=Hematology                                              0.2718
+medical_specialty=Proctology                                9.102759590309713E12
+medical_specialty=Obstetrics                                              1.0812
+medical_specialty=SurgicalSpecialty                                       1.3338
+medical_specialty=Radiologist                                             1.0492
+medical_specialty=Pathology                                               2.6291
+medical_specialty=Dermatology                                        825410.9942
+medical_specialty=SportsMedicine                          2.09882027268101216E17
+medical_specialty=Speech                                    8.218575626460509E10
+medical_specialty=Hospitalist                                             1.5366
+medical_specialty=OutreachServices                                        1.1708
+medical_specialty=Cardiology-Pediatric                                    0.4248
+medical_specialty=Perinatology                                    227382662.1173
+medical_specialty=Neurophysiology                          1.7180134582150615E12
+medical_specialty=Endocrinology-Metabolism                                0.5932
+medical_specialty=DCPTEAM                                          91857418.3142
+medical_specialty=Resident                                                0.1308
+num_lab_procedures                                                        0.9993
+num_procedures                                                            1.0017
+num_medications                                                           0.9948
+number_outpatient                                                         1.0014
+number_emergency                                                            0.96
+number_inpatient                                                          0.7688
+number_diagnoses                                                          0.9621
+max_glu_serum=None                                                        1.1135
+max_glu_serum=>300                                                        0.8725
+max_glu_serum=Norm                                                        0.9365
+max_glu_serum=>200                                                        0.8673
+A1Cresult=None                                                            0.9387
+A1Cresult=>8                                                              1.0408
+A1Cresult=>7                                                              1.0559
+A1Cresult=Norm                                                            1.0867
+change                                                                    1.0083
+diabetesMed                                                               1.1956
+
+
+Time taken to build model: 88.22 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       90370               88.8026 %
+Incorrectly Classified Instances     11395               11.1974 %
+Kappa statistic                          0.0273
+Mean absolute error                      0.1894
+Root mean squared error                  0.3084
+Relative absolute error                 95.4883 %
+Root relative squared error             97.9577 %
+Coverage of cases (0.95 level)          99.8369 %
+Mean rel. region size (0.95 level)      97.3488 %
+Total Number of Instances           101765     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.997    0.981    0.890      0.997    0.941      0.074    0.668     0.936     NO
+                 0.019    0.003    0.459      0.019    0.036      0.074    0.668     0.213     YES
+Weighted Avg.    0.888    0.872    0.842      0.888    0.840      0.074    0.668     0.855     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 90159   249 |     a = NO
+ 11146   211 |     b = YES
+

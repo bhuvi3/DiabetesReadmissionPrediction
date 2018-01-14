@@ -1,0 +1,40 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 10 -T 0 -C 0.6 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -c -1
+Relation:     diabetic_data_normalized-weka.filters.unsupervised.attribute.NumericToNominal-R1,2,7,8,9-weka.filters.unsupervised.attribute.StringToNominal-R19,20,21-weka.filters.unsupervised.attribute.Remove-R1-2,5-49
+Instances:    30000
+Attributes:   3
+              race
+              gender
+              readmitted
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.1 (3000 instances)
+Minimum metric <confidence>: 0.6
+Number of cycles performed: 18
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 7
+
+Size of set of large itemsets L(2): 12
+
+Size of set of large itemsets L(3): 6
+
+Best rules found:
+
+ 1. gender=Male readmitted=>30 4596 ==> race=Caucasian 3597    <conf:(0.78)> lift:(1.04) lev:(0) [136] conv:(1.14)
+ 2. gender=Male readmitted=NO 4758 ==> race=Caucasian 3715    <conf:(0.78)> lift:(1.04) lev:(0) [132] conv:(1.13)
+ 3. gender=Male 13932 ==> race=Caucasian 10838    <conf:(0.78)> lift:(1.03) lev:(0.01) [349] conv:(1.11)
+ 4. gender=Male readmitted=<30 4578 ==> race=Caucasian 3526    <conf:(0.77)> lift:(1.02) lev:(0) [79] conv:(1.07)
+ 5. readmitted=NO 10000 ==> race=Caucasian 7578    <conf:(0.76)> lift:(1.01) lev:(0) [49] conv:(1.02)
+ 6. readmitted=<30 10000 ==> race=Caucasian 7517    <conf:(0.75)> lift:(1) lev:(0) [-11] conv:(0.99)
+ 7. readmitted=>30 10000 ==> race=Caucasian 7491    <conf:(0.75)> lift:(0.99) lev:(0) [-37] conv:(0.98)
+ 8. gender=Female readmitted=NO 5242 ==> race=Caucasian 3863    <conf:(0.74)> lift:(0.98) lev:(0) [-83] conv:(0.94)
+ 9. gender=Female readmitted=<30 5422 ==> race=Caucasian 3991    <conf:(0.74)> lift:(0.98) lev:(0) [-91] conv:(0.94)
+10. gender=Female 16068 ==> race=Caucasian 11748    <conf:(0.73)> lift:(0.97) lev:(-0.01) [-349] conv:(0.92)
+

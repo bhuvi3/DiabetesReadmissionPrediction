@@ -1,0 +1,89 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.misc.InputMappedClassifier -I -trim -W weka.classifiers.bayes.BayesNet -- -D -Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5
+Relation:     complete_cleared_all_diag_compress_train_select_rand_4_times_-weka.filters.unsupervised.attribute.NumericToNominal-R4,5,6-weka.filters.unsupervised.attribute.Remove-R1-3,7-8,10,14-16,18-22
+Instances:    108692
+Attributes:   9
+              admission_type_id
+              discharge_disposition_id
+              admission_source_id
+              num_procedures
+              number_outpatient
+              number_emergency
+              number_inpatient
+              number_diagnoses
+              readmitted
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+InputMappedClassifier:
+
+Bayes Network Classifier
+not using ADTree
+#attributes=9 #classindex=8
+Network structure (nodes followed by parents)
+admission_type_id(8): readmitted 
+discharge_disposition_id(26): readmitted 
+admission_source_id(16): readmitted 
+num_procedures(3): readmitted 
+number_outpatient(2): readmitted 
+number_emergency(5): readmitted 
+number_inpatient(7): readmitted 
+number_diagnoses(4): readmitted 
+readmitted(3): 
+LogScore Bayes: -1005462.2946013983
+LogScore BDeu: -1006175.4850624314
+LogScore MDL: -1006251.9575616698
+LogScore ENTROPY: -1005144.5134449654
+LogScore AIC: -1005335.5134449654
+
+Attribute mappings:
+
+Model attributes                    	    Incoming attributes
+------------------------------------	    ----------------
+(nominal) admission_type_id         	--> 4 (nominal) admission_type_id
+(nominal) discharge_disposition_id  	--> 5 (nominal) discharge_disposition_id
+(nominal) admission_source_id       	--> 6 (nominal) admission_source_id
+(numeric) num_procedures            	--> 9 (numeric) num_procedures
+(numeric) number_outpatient         	--> 11 (numeric) number_outpatient
+(numeric) number_emergency          	--> 12 (numeric) number_emergency
+(numeric) number_inpatient          	--> 13 (numeric) number_inpatient
+(numeric) number_diagnoses          	--> 17 (numeric) number_diagnoses
+(nominal) readmitted                	--> 23 (nominal) readmitted
+
+
+Time taken to build model: 0.6 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.78 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       10316               44.7491 %
+Incorrectly Classified Instances     12737               55.2509 %
+Kappa statistic                          0.1316
+Mean absolute error                      0.4079
+Root mean squared error                  0.4606
+Relative absolute error                 90.9428 %
+Root relative squared error             95.9712 %
+Coverage of cases (0.95 level)          99.6226 %
+Mean rel. region size (0.95 level)      97.98   %
+Total Number of Instances            23053     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.025    0.017    0.447      0.025    0.047      0.029    0.623     0.444     >30
+                 0.689    0.451    0.639      0.689    0.663      0.241    0.673     0.702     NO
+                 0.599    0.376    0.171      0.599    0.266      0.145    0.660     0.213     <30
+Weighted Avg.    0.447    0.291    0.518      0.447    0.403      0.156    0.654     0.556     
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  201 3805 4026 |    a = >30
+  200 8533 3645 |    b = NO
+   49 1012 1582 |    c = <30
+

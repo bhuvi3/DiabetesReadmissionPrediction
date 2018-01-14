@@ -1,0 +1,49 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 10 -T 0 -C 0.6 -D 0.05 -U 1.0 -M 0.01 -S -1.0 -A -c -1
+Relation:     diabetic_data_normalized-weka.filters.unsupervised.attribute.NumericToNominal-R1,2,7,8,9-weka.filters.unsupervised.attribute.StringToNominal-R19,20,21-weka.filters.unsupervised.attribute.Remove-R1-12,19-21,23-49-weka.filters.unsupervised.attribute.NumericToNominal-R1,2,3,4,5,6,7
+Instances:    101765
+Attributes:   8
+              num_lab_procedures
+              num_procedures
+              num_medications
+              number_outpatient
+              number_emergency
+              number_inpatient
+              number_diagnoses
+              readmitted
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.06 (6106 instances)
+Minimum metric <confidence>: 0.6
+Number of cycles performed: 19
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 25
+
+Size of set of large itemsets L(2): 41
+
+Size of set of large itemsets L(3): 28
+
+Size of set of large itemsets L(4): 10
+
+Size of set of large itemsets L(5): 1
+
+Best rules found:
+
+ 1. number_outpatient=0 number_emergency=0 number_inpatient=0 number_diagnoses=5 7621 ==> readmitted=NO 5457    conf:(0.72)
+ 2. number_outpatient=0 number_inpatient=0 number_diagnoses=5 7856 ==> readmitted=NO 5586    conf:(0.71)
+ 3. number_emergency=0 number_inpatient=0 number_diagnoses=5 8174 ==> readmitted=NO 5785    conf:(0.71)
+ 4. number_inpatient=0 number_diagnoses=5 8490 ==> readmitted=NO 5960    conf:(0.7)
+ 5. number_outpatient=0 number_emergency=0 number_diagnoses=5 9878 ==> readmitted=NO 6641    conf:(0.67)
+ 6. number_outpatient=0 number_diagnoses=5 10337 ==> readmitted=NO 6837    conf:(0.66)
+ 7. number_emergency=0 number_diagnoses=5 10730 ==> readmitted=NO 7081    conf:(0.66)
+ 8. number_diagnoses=5 11392 ==> readmitted=NO 7353    conf:(0.65)
+ 9. num_procedures=1 number_outpatient=0 number_emergency=0 number_inpatient=0 10932 ==> readmitted=NO 7055    conf:(0.65)
+10. number_outpatient=0 number_emergency=0 number_inpatient=0 55828 ==> readmitted=NO 35625    conf:(0.64)
+

@@ -1,0 +1,75 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.misc.InputMappedClassifier -I -trim -W weka.classifiers.trees.RandomForest -- -I 250 -K 0 -S 1 -depth 5 -num-slots 1
+Relation:     complete_cleared_all_diag_compress_train_select_rand_4_times_-weka.filters.unsupervised.attribute.NumericToNominal-R4,5,6-weka.filters.unsupervised.attribute.Remove-R1-3,7-8,10,14-16,18-22
+Instances:    108692
+Attributes:   9
+              admission_type_id
+              discharge_disposition_id
+              admission_source_id
+              num_procedures
+              number_outpatient
+              number_emergency
+              number_inpatient
+              number_diagnoses
+              readmitted
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+InputMappedClassifier:
+
+Random forest of 250 trees, each constructed while considering 4 random features.
+Out of bag error: 0.4901
+Max. depth of trees: 5
+
+
+Attribute mappings:
+
+Model attributes                    	    Incoming attributes
+------------------------------------	    ----------------
+(nominal) admission_type_id         	--> 4 (nominal) admission_type_id
+(nominal) discharge_disposition_id  	--> 5 (nominal) discharge_disposition_id
+(nominal) admission_source_id       	--> 6 (nominal) admission_source_id
+(numeric) num_procedures            	--> 9 (numeric) num_procedures
+(numeric) number_outpatient         	--> 11 (numeric) number_outpatient
+(numeric) number_emergency          	--> 12 (numeric) number_emergency
+(numeric) number_inpatient          	--> 13 (numeric) number_inpatient
+(numeric) number_diagnoses          	--> 17 (numeric) number_diagnoses
+(nominal) readmitted                	--> 23 (nominal) readmitted
+
+
+Time taken to build model: 60.72 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 1.8 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        9898               42.9358 %
+Incorrectly Classified Instances     13155               57.0642 %
+Kappa statistic                          0.1297
+Mean absolute error                      0.4149
+Root mean squared error                  0.4598
+Relative absolute error                 92.4845 %
+Root relative squared error             95.8069 %
+Coverage of cases (0.95 level)          99.9263 %
+Mean rel. region size (0.95 level)      98.6018 %
+Total Number of Instances            23053     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.010    0.006    0.448      0.010    0.019      0.018    0.620     0.440     >30
+                 0.652    0.410    0.649      0.652    0.650      0.242    0.675     0.702     NO
+                 0.663    0.426    0.168      0.663    0.268      0.152    0.668     0.232     <30
+Weighted Avg.    0.429    0.271    0.523      0.429    0.386      0.154    0.655     0.557     
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+   77 3501 4454 |    a = >30
+   76 8070 4232 |    b = NO
+   19  873 1751 |    c = <30
+

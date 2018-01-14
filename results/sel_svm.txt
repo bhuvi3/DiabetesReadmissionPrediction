@@ -1,0 +1,69 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.LibSVM -S 0 -K 2 -D 3 -G 0.0 -R 0.0 -N 0.5 -M 40.0 -C 1.0 -E 0.001 -P 0.1 -model "C:\\Program Files\\Weka-3-7" -seed 1
+Relation:     complete_cleared_all_diag_compress_train-weka.filters.unsupervised.attribute.Remove-R20-36,38-42-weka.filters.unsupervised.attribute.NumericToNominal-R4,5,6
+Instances:    75000
+Attributes:   23
+              race
+              gender
+              age
+              admission_type_id
+              discharge_disposition_id
+              admission_source_id
+              time_in_hospital
+              num_lab_procedures
+              num_procedures
+              num_medications
+              number_outpatient
+              number_emergency
+              number_inpatient
+              diag_1
+              diag_2
+              diag_3
+              number_diagnoses
+              max_glu_serum
+              A1Cresult
+              insulin
+              change
+              diabetesMed
+              readmitted
+Test mode:    split 80.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+LibSVM wrapper, original code by Yasser EL-Manzalawy (= WLSVM)
+
+Time taken to build model: 5891.18 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on training split: 219.76 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        8454               56.36   %
+Incorrectly Classified Instances      6546               43.64   %
+Kappa statistic                          0.1242
+Mean absolute error                      0.2909
+Root mean squared error                  0.5394
+Relative absolute error                 75.4407 %
+Root relative squared error            122.6765 %
+Coverage of cases (0.95 level)          56.36   %
+Mean rel. region size (0.95 level)      33.3333 %
+Total Number of Instances            15000     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.926    0.778    0.568      0.926    0.704      0.209    0.574     0.565     NO
+                 0.005    0.001    0.563      0.005    0.011      0.047    0.502     0.114     <30
+                 0.211    0.104    0.535      0.211    0.303      0.147    0.553     0.399     >30
+Weighted Avg.    0.564    0.447    0.556      0.564    0.481      0.168    0.558     0.455     
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 7295    2  584 |    a = NO
+ 1252    9  414 |    b = <30
+ 4289    5 1150 |    c = >30
+

@@ -1,0 +1,28 @@
+
+*************\Total = 69159
+********
+
+{0: '<30', 1: '>30', 2: 'NO'}
+*******Area Below Curve*********
+Precision-Recall*AUC: {<30} => 0.201357066761
+ReceiverOperatingCharacheristics*AUC: {<30} => 0.62827123425
+Precision-Recall*AUC: {>30} => 0.508996674501
+ReceiverOperatingCharacheristics*AUC: {>30} => 0.567503913346
+Precision-Recall*AUC: {NO} => 0.685581082772
+ReceiverOperatingCharacheristics*AUC: {NO} => 0.618329403645
+Confusion_Matrix => {<30} : 
+[[15925  4485]
+ [ 1608  1035]]
+
+Confusion_Matrix => {>30} : 
+[[15021     0]
+ [ 8032     0]]
+
+Confusion_Matrix => {NO} : 
+[[9838  837]
+ [9758 2620]]
+
+
+**********
+Training Time = 130.78399992
+*************

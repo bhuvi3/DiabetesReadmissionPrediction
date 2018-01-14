@@ -1,0 +1,25 @@
+
+*************\Total = 220620
+********
+
+['>30' 'NO' '<30']
+*******Area Below Curve*********
+Precision-Recall*AUC: {>30} => 0.435180445796
+ReceiverOperatingCharacheristics*AUC: {>30} => 0.59859750244
+Precision-Recall*AUC: {NO} => 0.651852254362
+ReceiverOperatingCharacheristics*AUC: {NO} => 0.631185689877
+Precision-Recall*AUC: {<30} => 0.182617419814
+ReceiverOperatingCharacheristics*AUC: {<30} => 0.62656146544
+[[43919  3626]
+ [21892  4103]]
+
+[[16400 17881]
+ [ 9402 29857]]
+
+[[65233    21]
+ [ 8274    12]]
+
+
+**********
+Training Time = 22.2589998245
+*************

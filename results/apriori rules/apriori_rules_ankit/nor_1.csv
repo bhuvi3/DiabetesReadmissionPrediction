@@ -1,0 +1,4 @@
+age=[70-80) diag_1=786.0 diag_3=401.0,race=Caucasian diag_1=386.0,diag_2=411.0 diag_3=V45,diag_1=414.0 diag_2=411.0 diag_3=V45,diag_1=386.0,diag_1=682.0 diag_2=250.0,diag_2=493.0 diag_3=250.0,race=AfricanAmerican gender=Female diag_1=786.0 diag_3=250.0,race=AfricanAmerican gender=Female age=[50-60) diag_1=786.0,age=[50-60) diag_1=786.0 diag_3=250.0,race=Caucasian gender=Female diag_1=786.0 diag_3=401.0,race=Caucasian age=[60-70) diag_1=250.8 diag_2=707.0,race=Caucasian gender=Female diag_2=414.0 diag_3=V45,race=Caucasian gender=Female diag_1=486.0 diag_3=428.0,gender=Female diag_2=414.0 diag_3=V45,gender=Female age=[80-90) diag_2=780.0,gender=Female diag_1=486.0 diag_3=428.0,race=Caucasian diag_1=414.0 diag_3=414.0,race=Caucasian gender=Male diag_3=413.0,diag_1=786.0 diag_2=250.0 diag_3=401.0,readmitted
+0,67,52,51,85,153,90,93,0,0,152,0,58,64,73,0,76,110,75,174,NO
+0,51,51,47,56,56,54,52,0,0,63,0,49,71,58,0,88,77,55,52,>30
+0,3,3,3,4,4,4,4,0,0,5,0,4,6,5,0,8,7,5,5,<30

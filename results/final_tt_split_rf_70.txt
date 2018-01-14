@@ -1,0 +1,73 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -I 250 -K 0 -S 1 -depth 5 -num-slots 1
+Relation:     complete_cleared_all_diag_compress_full_select-weka.filters.unsupervised.attribute.NumericToNominal-R4,5,6
+Instances:    98053
+Attributes:   23
+              race
+              gender
+              age
+              admission_type_id
+              discharge_disposition_id
+              admission_source_id
+              time_in_hospital
+              num_lab_procedures
+              num_procedures
+              num_medications
+              number_outpatient
+              number_emergency
+              number_inpatient
+              diag_1
+              diag_2
+              diag_3
+              number_diagnoses
+              max_glu_serum
+              A1Cresult
+              insulin
+              change
+              diabetesMed
+              readmitted
+Test mode:    split 70.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+Random forest of 250 trees, each constructed while considering 5 random features.
+Out of bag error: 0.4247
+Max. depth of trees: 5
+
+
+
+Time taken to build model: 78.78 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on training split: 2.77 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       17000               57.7917 %
+Incorrectly Classified Instances     12416               42.2083 %
+Kappa statistic                          0.1589
+Mean absolute error                      0.3642
+Root mean squared error                  0.4224
+Relative absolute error                 94.5974 %
+Root relative squared error             96.2773 %
+Coverage of cases (0.95 level)          99.9558 %
+Mean rel. region size (0.95 level)      99.1841 %
+Total Number of Instances            29416     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.290    0.144    0.522      0.290    0.373      0.175    0.651     0.478     >30
+                 0.890    0.704    0.592      0.890    0.711      0.232    0.691     0.720     NO
+                 0.005    0.001    0.548      0.005    0.010      0.045    0.667     0.221     <30
+Weighted Avg.    0.578    0.427    0.562      0.578    0.512      0.191    0.674     0.578     
+
+=== Confusion Matrix ===
+
+     a     b     c   <-- classified as
+  3007  7364     6 |     a = >30
+  1728 13976     8 |     b = NO
+  1023  2287    17 |     c = <30
+
