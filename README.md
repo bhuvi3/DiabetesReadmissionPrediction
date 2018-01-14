@@ -1,5 +1,5 @@
 # DiabetesReadmissionPrediction
-The project to "Predict the Hospital Readmission Rates for Diabetic Patients and to Identify High-Risk factors", worked on during CMU Winter School (IPTSE 2014).
+The project undertaken as part of CMU Winter School (IPTSE 2014) to "Predict the Hospital Readmission Rates for Diabetic Patients and to Identify High-Risk factors".
 
 ### Link to research paper published as a result of this project: [arXiv](https://arxiv.org/abs/1602.04257)
 ### Identifying Diabetic Patients with High Risk of Readmission
